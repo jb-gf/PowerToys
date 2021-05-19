@@ -187,7 +187,7 @@ void ReportWindowsVersion(const filesystem::path& tmpDir)
     }
 }
 
-void reportWindowsSettings(const filesystem::path& tmpDir)
+void ReportWindowsSettings(const filesystem::path& tmpDir)
 {
     std::wstring userLanguage;
     std::wstring userLocale;
@@ -314,7 +314,7 @@ int wmain(int argc, wchar_t* argv[], wchar_t*)
     HideUserPrivateInfo(tmpDir);
 
     // Write windows settings to the temporary folder
-    reportWindowsSettings(tmpDir);
+    ReportWindowsSettings(tmpDir);
 
     // Write monitors info to the temporary folder
     ReportMonitorInfo(tmpDir);
